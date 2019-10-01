@@ -1,0 +1,21 @@
+version: "3"
+services: 
+    strapi:
+      container_name: strapi
+      build: .
+      ports: 
+        - 1337:1337
+      depends_on: 
+        - strapi-mongo
+      links: 
+        - strapi-mongo
+    strapi-mongo:
+      container_name: strapi-mongo
+      image: mongo:3.5
+      environment: 
+       - MONGO_INITDB_DATABASE=strapi
+      ports:
+        - 27017:27017
+      
+
+
