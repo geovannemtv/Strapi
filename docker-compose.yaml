@@ -2,7 +2,7 @@ version: "3"
 services: 
     strapi:
       container_name: strapi
-      build: .
+      image: geovanne123/strapi:latest
       ports: 
         - 1337:1337
       depends_on: 
@@ -10,7 +10,8 @@ services:
       links: 
         - strapi-mongo
       environment: 
-        - DATABASE_HOST=strapi-mongo 
+        - DATABASE_HOST=strapi-mongo
+      restart: unless-stopped
 
     strapi-mongo:
       container_name: strapi-mongo
@@ -19,6 +20,7 @@ services:
        - MONGO_INITDB_DATABASE=strapi
       ports:
         - 27017:27017
+      restart: unless-stopped
       
 
 
