@@ -9,8 +9,9 @@ services:
         - strapi-mongo
       links: 
         - strapi-mongo
-      volumes: 
-        - ./ /src
+      environment: 
+        - DATABASE_HOST=strapi-mongo 
+
     strapi-mongo:
       container_name: strapi-mongo
       image: mongo:3.5
