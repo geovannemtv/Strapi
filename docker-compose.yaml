@@ -9,6 +9,8 @@ services:
         - strapi-mongo
       links: 
         - strapi-mongo
+      volumes: 
+        - ./ /src
     strapi-mongo:
       container_name: strapi-mongo
       image: mongo:3.5
