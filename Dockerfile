@@ -7,7 +7,7 @@ WORKDIR /src
 COPY ./ /src
 
 # install requirements
-RUN apk update && apk add curl && apk add yarn -y
+RUN apk update  add curl add yarn 
 
 #install strapi
 RUN npm install strapi@alpha -g
