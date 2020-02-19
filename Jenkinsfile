@@ -23,15 +23,15 @@ pipeline{
             }
         }
         
-        stage('Push-image'){       
-            steps {
-                script {
-                    withDockerRegistry(credentialsId: 'docker-login-hub', url: 'https://hub.docker.com'){
-                            sh 'docker push geovanne123/strapi:latest'
-                    }
-                }   
-            }
-        }
+        // stage('Push-image'){       
+        //     steps {
+        //         script {
+        //             withDockerRegistry(credentialsId: 'docker-login-hub', url: 'https://hub.docker.com'){
+        //                     sh 'docker push geovanne123/strapi:latest'
+        //             }
+        //         }   
+        //     }
+        // }
 
         
 
