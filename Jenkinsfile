@@ -26,7 +26,7 @@ pipeline{
         stage('Push-image'){       
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'docker-login-hub', url: 'https://hub.docker.com'){
+                    withDockerRegistry(credentialsId: 'docker-login-hub', url: 'https://registry.supera.com.br'){
                             sh 'docker push geovanne123/strapi:latest'
                     }
                 }   
