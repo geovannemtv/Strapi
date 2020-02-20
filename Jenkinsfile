@@ -15,13 +15,13 @@ pipeline{
         //     }
         // }
 
-        // stage('Build-image'){
-        //     steps{
-        //         script{
-        //             docker.build ("geovanne123/strapi:latest")
-        //         }
-        //     }
-        // }
+        stage('Build-image'){
+            steps{
+                script{
+                    docker.build ("geovanne123/strapi:latest")
+                }
+            }
+        }
         
         // stage('Push-image'){       
         //     steps {
